@@ -1,9 +1,9 @@
 params.output='results'
-process liftover_bed {
-    publishDir "${params.output}/liftover"
+process get_motif_with_bed {
+    publishDir "${params.output}/get_motif_with_bed"
     input:
     file bed
-    file chain
+    file motif_bed_gz
     output:
     file "*from*.bed"
     script:
